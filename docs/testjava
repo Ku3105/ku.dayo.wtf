@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrolling Animation</title>
+    <style>
+    body {
+        overflow: hidden; /* スクロールバーを非表示に */
+    }
+
+    .black-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: 2; /* 黒い背景を前面に */
+    }
+
+    .hole {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: white;
+        border-radius: 50%; /* 円形に */
+        transform: translate(-50%, -50%); /* 中央配置 */
+        z-index: 3; /* 穴を最前面に */
+    }
+    </style>
+</head>
+<body>
+    <div class="black-background"></div>
+    <div class="hole"></div>
+
+    <!-- ここにウェブページの内容 -->
+
+    <script>
+    window.addEventListener('scroll', function() {
+        // スクロール位置に応じて穴の大きさを変える
+        var hole = document.querySelector('.hole');
+        hole.style.width = hole.style.height = (window.pageYOffset + window.innerHeight) + 'px';
+    });
+    </script>
+</body>
+</html>
