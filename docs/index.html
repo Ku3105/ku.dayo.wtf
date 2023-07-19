@@ -4,28 +4,33 @@
     <title>Scrolling Animation</title>
     <style>
     body {
-        overflow: hidden; /* スクロールバーを非表示に */
+        overflow: auto;
         font-family: Arial, sans-serif;
+        height: 2000px; 
+        margin: 0;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hole {
         position: fixed;
         top: 50%;
         left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: 50%; /* 円形に */
-        transform: translate(-50%, -50%); /* 中央配置 */
-        z-index: 3; /* 穴を最前面に */
-        box-sizing: border-box; /* 大きさの計算方法を変更 */
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 1); /* 大きな黒い影 */
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; 
+        transform: translate(-50%, -50%); 
+        box-sizing: border-box; 
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 1);
+        z-index: 2; 
     }
 
     .content {
         position: relative;
-        z-index: 1; /* コンテンツを背面に */
-        padding: 50px;
-        height: 2000px; /* 一定のスクロール領域を確保 */
+        z-index: 3; 
+        text-align: center;
     }
 
     h1, h2, p {
@@ -54,9 +59,9 @@
     window.addEventListener('scroll', function() {
         // スクロール位置に応じて穴の大きさを変える
         var hole = document.querySelector('.hole');
-        var size = window.pageYOffset + window.innerHeight;
-        hole.style.width = hole.style.height = size + 'px';
-        hole.style.boxShadow = `0 0 0 ${10000 - size}px rgba(0, 0, 0, 1)`;
+        var size = Math.max(window.pageYOffset, window.innerHeight);
+        hole.style.borderRadius = `${size}px`;
+        hole.style.boxShadow = `0 0 0 ${size}px rgba(0, 0, 0, 1)`;
     });
     </script>
 </body>
