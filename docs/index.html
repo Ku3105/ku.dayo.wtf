@@ -5,6 +5,7 @@
     <style>
     body {
         overflow: hidden; /* スクロールバーを非表示に */
+        font-family: Arial, sans-serif;
     }
 
     .hole {
@@ -18,12 +19,35 @@
         z-index: 3; /* 穴を最前面に */
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 1); /* 大きな黒い影 */
     }
+
+    .content {
+        position: relative;
+        z-index: 1; /* コンテンツを背面に */
+        padding: 50px;
+        height: 2000px; /* 一定のスクロール領域を確保 */
+    }
+
+    h1, h2, p {
+        margin: 0 0 15px 0;
+    }
     </style>
 </head>
 <body>
     <div class="hole"></div>
 
-    <!-- ここにウェブページの内容 -->
+    <!-- Here is the webpage content -->
+    <div class="content">
+        <h1>あなたの名前</h1>
+        <h2>あなたの職業</h2>
+
+        <h2>プロジェクト1</h2>
+        <p>プロジェクト1についての詳細。</p>
+
+        <h2>プロジェクト2</h2>
+        <p>プロジェクト2についての詳細。</p>
+
+        <!-- その他のプロジェクト -->
+    </div>
 
     <script>
     window.addEventListener('scroll', function() {
