@@ -17,6 +17,7 @@
         border-radius: 50%; /* 円形に */
         transform: translate(-50%, -50%); /* 中央配置 */
         z-index: 3; /* 穴を最前面に */
+        box-sizing: border-box; /* 大きさの計算方法を変更 */
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 1); /* 大きな黒い影 */
     }
 
@@ -53,7 +54,9 @@
     window.addEventListener('scroll', function() {
         // スクロール位置に応じて穴の大きさを変える
         var hole = document.querySelector('.hole');
-        hole.style.width = hole.style.height = (window.pageYOffset + window.innerHeight) + 'px';
+        var size = window.pageYOffset + window.innerHeight;
+        hole.style.width = hole.style.height = size + 'px';
+        hole.style.boxShadow = `0 0 0 ${10000 - size}px rgba(0, 0, 0, 1)`;
     });
     </script>
 </body>
