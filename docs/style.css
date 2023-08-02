@@ -125,8 +125,9 @@
     /*リンクの形状*/
 	display:inline-block;
     text-decoration: none;
+    float: left;
     color: #fff;
-    outline: none;
+    padding: 33px 20px;
 }
 
 /*波形の設定*/
