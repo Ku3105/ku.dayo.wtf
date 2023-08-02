@@ -98,10 +98,12 @@
 .footer-logo {
     float: left;
     font-size: 32px;
+    color: #fff;
 }
 
 .footer-list {
     float: right;
+    color: #fff;
 }
 
 .footer-list li {
@@ -128,7 +130,7 @@
     left:30%;
     top:0;
     /*波形の形状*/
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
     width: 60px;
     height: 60px;
     border-radius: 50%;
