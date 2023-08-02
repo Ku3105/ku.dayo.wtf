@@ -124,9 +124,9 @@
     position: relative;
     /*リンクの形状*/
     display:inline-block;
-    margin:40px 10px 40px 10px;
+    margin: 10px 40px 10px;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
     outline: none;
 }
 
