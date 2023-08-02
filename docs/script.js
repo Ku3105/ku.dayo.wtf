@@ -22,6 +22,7 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	step: function(state, bar) {
 		bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
 	}
+	
 });
 
 //アニメーションスタート
@@ -30,4 +31,11 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 	$(".loader_cover-up").addClass("coveranime");//カバーが上に上がるクラス追加
 	$(".loader_cover-down").addClass("coveranime");//カバーが下に下がるクラス追加
 	$("#splash").fadeOut();//#splashエリアをフェードアウト
+});
+
+$('#page-link a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
+	var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+	var pos = $(elmHash).offset().top;	//idの上部の距離を取得
+	$('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+	return false;
 });
