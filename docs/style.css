@@ -132,7 +132,6 @@
 
 body{
     vertical-align:middle; 
-    padding: 100px 0;
     text-align: center;
 }
 
@@ -174,9 +173,4 @@ li {
 		transform:scale(2);
 		opacity: 0;
 	}
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
 }
