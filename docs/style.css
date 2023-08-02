@@ -45,7 +45,7 @@
 }
 
 .header {
-    background-color: #26d0c9;
+    background-color: #3d3d3d;
     color: #fff;
     height: 90px;
 }
@@ -147,17 +147,3 @@
 	}
 }
 
-/*矢印の設定*/
-.btnripple3::after {
-    content: '';
-    /*絶対配置で矢印の位置を決める*/
-    position: absolute;
-    top: 30%;
-    right: -20px;
-    /*矢印の形状*/
-    width: 5px;
-    height: 5px;
-    border-top: 1px solid #000;
-    border-right: 1px solid #000;
-    transform: rotate(45deg);
-}
