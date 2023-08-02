@@ -124,7 +124,7 @@
     position: relative;
     /*リンクの形状*/
     display:inline-block;
-    margin:0 10px 20px 10px;
+    margin:20px 10px 20px 10px;
     text-decoration: none;
     color: #333;
     outline: none;
