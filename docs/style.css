@@ -50,6 +50,12 @@
     height: 90px;
 }
 
+.header-list{
+    float: left;
+    color: #fff;
+    padding: 33px 20px;
+    list-style: none;
+}
 .header-logo {
     float: left;
     color: #fff;
@@ -109,6 +115,9 @@
 
 .footer-list li {
     padding-bottom: 20px;
+    float: left;
+    color: #fff;
+    list-style: none;
 }
 
 /*== 波紋がふわっと広がる */
