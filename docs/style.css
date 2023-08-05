@@ -285,7 +285,7 @@ img {
 .about__img img {
     border-radius: 50%;
     margin: auto;
-    width: 100%;
+    width: 50%;
     margin-bottom: 1rem;
 }
 
