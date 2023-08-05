@@ -283,9 +283,9 @@ img {
 }
 
 .about__img img {
-    border-radius: 50%;
+    border-radius: 30%;
     margin: auto;
-    width: 50%;
+    width: 30%;
     margin-bottom: 1rem;
 }
 
