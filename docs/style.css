@@ -300,3 +300,15 @@ img {
     font-size: 1.8rem;
     margin-top: 40px;
 }
+
+.contact__row {
+    font-size: 1.6rem;
+}
+
+.contact__block {
+    margin: 70px 0 150px;
+}
+
+.contact__mail {
+    font-size: 2rem;
+}
