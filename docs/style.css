@@ -45,8 +45,10 @@ body {
 
 #container {
     width: 100%;
-    height: 100vh;
+    height: 200px;
+    margin: 20px auto;
     background: #ccc;
+    max-width: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,7 +285,7 @@ img {
 .about__img img {
     border-radius: 50%;
     margin: auto;
-    width: 90%;
+    width: 100%;
     margin-bottom: 1rem;
 }
 
