@@ -6,7 +6,7 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	color: '#555',//進捗ゲージのカラー
 	trailWidth: 0.2,//ゲージベースの線の太さ
 	trailColor: '#bbb',//ゲージベースの線のカラー
-	text: {//テキストの形状を直接指定				
+	text: {//テキストの形状を直接指定       
 		style: {//天地中央に配置
 			position: 'absolute',
 			left: '50%',
@@ -17,13 +17,17 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 			'font-size':'1rem',
 			color: '#fff',
 		},
-		autoStyleContainer: false //自動付与のスタイルを切る
+	  autoStyleContainer: false //自動付与のスタイルを切る
 	},
 	step: function(state, bar) {
-		bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
+	  bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
 	}
-	
 });
+
+  //アニメーションスタート
+bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
+	$("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
+});  
 
 //アニメーションスタート
 bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
