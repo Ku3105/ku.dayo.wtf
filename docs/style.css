@@ -94,26 +94,17 @@ a:hover {
 
 
 .main {
-    /* background-colorの指定を消してください */
-    /* heightの指定を消してください */
-    /* 上下のpaddingを100px、左右のpaddingを80pxにしてください */
     padding: 100px 80px;
 }
 
-
-/* copy-containerの中のh1のfont-sizeを指定してください */
 .copy-container h1 {
     font-size: 140px;
 }
 
-
-/* copy-containerの中のh2のfont-sizeを指定してください */
 .copy-container h2 {
     font-size: 60px;
 }
 
-
-/* copy-containerの中のspanの色を指定してください */
 .copy-container span {
     color: #ffb5e6;
 }
@@ -226,6 +217,7 @@ img {
 /*メイン画像下に余白をつける*/
 .gallery {
     margin: 0 0 5px 0;
+    border-radius: 30px;
 }
 
 /*矢印の設定*/
@@ -271,10 +263,12 @@ img {
 
 .choice-btn li img {
     opacity: 0.4;
+    border-radius: 7px;
     /*選択されていないものは透過40%*/
 }
 
 .choice-btn li.slick-current img {
     opacity: 1;
+    border-radius: 7px;
     /*選択されているものは透過しない*/
 }
