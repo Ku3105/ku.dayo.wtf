@@ -220,7 +220,7 @@ img {
     width: 100%;
     height: auto;
     vertical-align: bottom;
-    /*画像の下にできる余白を削除*/
+    border-radius: 30px;
 }
 
 /*メイン画像下に余白をつける*/
