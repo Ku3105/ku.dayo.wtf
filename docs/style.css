@@ -272,3 +272,29 @@ img {
     border-radius: 7px;
     /*選択されているものは透過しない*/
 }
+
+.about {
+    /* 背景を画像にする際は以下を編集 */
+    /* background: url(../images/about.png) no-repeat center center; */
+    background: #f7f7f7;
+    background-size: cover;
+}
+
+.about__img img {
+    border-radius: 50%;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.about__name {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
+.about__info {
+    font-size: 1.8rem;
+    margin-top: 40px;
+}
